@@ -1,0 +1,57 @@
+{
+	"id": "2878cb1f-0657-4e5d-992b-d3c95a23ab04",
+	"name": "golang-restful-api-templete",
+	"values": [
+		{
+			"key": "protocol",
+			"value": "http",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "127.0.0.1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "port",
+			"value": "5000",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "{{protocol}}://{{host}}:{{port}}",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "refresh_token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "uuid",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "X-Forwarded-For",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-07-04T05:00:37.519Z",
+	"_postman_exported_using": "Postman/11.2.27"
+}

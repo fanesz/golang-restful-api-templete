@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "2a228331-0a28-4389-9b97-8ddfccfe7e9a",
+		"name": "golang-restful-api-templete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29749114"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at|username",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "fa",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By UUID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users/a804f12c-4d7a-4d1e-aa0b-725b9b8f324b",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"a804f12c-4d7a-4d1e-aa0b-725b9b8f324b"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at|username",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"fanes pratama 2\",\r\n    \"email\": \"fanes23.pratama@gmail.com\",\r\n    \"password\": \"awdawddd2\",\r\n    \"old_password\": \"awdawddd\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users/:uuid",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "baa4e0a5-26a6-4642-a72d-f27c1ec05885"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fanes@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/check-email",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"check-email"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Username",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"fanes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/check-username",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"check-username"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"fanes3\",\r\n    \"email\": \"fanes3@mail.com\",\r\n    \"password\": \"pw123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/signup",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"refresh_token\", pm.response.headers.get(\"refresh_token\"));\r",
+									"pm.environment.set(\"access_token\", pm.response.headers.get(\"access_token\"));\r",
+									"pm.environment.set(\"uuid\", pm.response.headers.get(\"uuid\"));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin@mail.com\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/signin",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", \"\");\r",
+									"pm.environment.set(\"refresh_token\", \"\");\r",
+									"pm.environment.set(\"uuid\", \"\");\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/signout",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset PW Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fanes23.pratama@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/reset-password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Reset Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "resetpw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZhbmVzMjMucHJhdGFtYUBnbWFpbC5jb20iLCJleHAiOjE3MjAwNjc2NjQsInJlc2V0X3Rva2VuIjoiN2V6dDc5Z2ZxemU4b3F1cGowMGs3ZHM1ZThsMThiZHBxOW53cHljaTJwYTN1NnM2a2pxdWw3eTlpNnFpaTczOCJ9.6Nd5aQ6zmNZc4rb4Rd2UjWKI2LbmD3PGUfdTyKSsFws",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fanes23.pratama@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/check-reset-token/:token",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"check-reset-token",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "resetpw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZhbmVzMjMucHJhdGFtYUBnbWFpbC5jb20iLCJleHAiOjE3MjAwNjk0MjksInJlc2V0X3Rva2VuIjoiMndnNDJ4bXk2M3E2eXN6aTZqZGljbXZpOHdhZGNiNjM4d2FxcDU5NXBxY2lvdXY4bW9vcnNua2d4M2dkbm4wcyJ9.nBnyqYm-qXnhmOAM4Ip3AigL2ISnsP372O9Y-vE5t-M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"new_password\": \"pwbaruu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/reset-password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.request.headers.add(\r",
+							"    { key: 'uuid', value: pm.variables.get(\"uuid\") }\r",
+							");\r",
+							"pm.request.headers.add(\r",
+							"    { key: 'access_token', value: pm.variables.get(\"access_token\") }\r",
+							");\r",
+							"pm.request.headers.add(\r",
+							"    { key: 'refresh_token', value: pm.variables.get(\"refresh_token\") }\r",
+							");\r",
+							"pm.request.headers.add(\r",
+							"    { key: 'X-Forwarded-For', value: pm.variables.get(\"X-Forwarded-For\") }\r",
+							");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"const newAccessToken = pm.response.headers.get(\"access_token\");\r",
+							"if (newAccessToken) {\r",
+							"    pm.environment.set(\"access_token\", newAccessToken);\r",
+							"}\r",
+							"\r",
+							"const newRefreshToken = pm.response.headers.get(\"refresh_token\");\r",
+							"if (newRefreshToken) {\r",
+							"    pm.environment.set(\"refresh_token\", newRefreshToken);\r",
+							"}"
+						]
+					}
+				}
+			]
+		}
+	]
+}
