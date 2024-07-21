@@ -15,7 +15,7 @@ type User struct {
 	RoleID       string    `gorm:"size:24;not null"`
 	Role         Role      `gorm:"foreignKey:RoleID;references:ID"`
 	LoginToken   string    `gorm:"size:255"`
-	IPAddress    string    `gorm:"size:20"`
+	IPAddress    string    `gorm:"size:128"`
 	ResetPWToken string    `gorm:"size:255"`
 	model.Timestamp
 }
