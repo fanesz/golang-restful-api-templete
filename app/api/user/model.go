@@ -17,7 +17,7 @@ type User struct {
 	LoginToken   string    `gorm:"size:255"`
 	IPAddress    string    `gorm:"size:128"`
 	ResetPWToken string    `gorm:"size:255"`
-	model.Timestamp
+	model.TimestampsSoftDelete
 }
 
 type Role struct {
