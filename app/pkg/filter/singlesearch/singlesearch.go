@@ -10,5 +10,6 @@ func Build(c *gin.Context, query *gorm.DB, searchField string, searchValue *stri
 		return
 	}
 
-	query.Where("LOWER(username) LIKE LOWER(?)", "%"+*searchValue+"%")
+	field := "LOWER(" + searchField + ")"
+	query.Where(field+" LIKE LOWER(?)", "%"+*searchValue+"%")
 }

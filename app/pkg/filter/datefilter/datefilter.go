@@ -2,6 +2,7 @@ package datefilter
 
 import (
 	"backend/app/common/consts"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -21,5 +22,5 @@ func Build(c *gin.Context, query *gorm.DB, filter *DateFilter) {
 		return
 	}
 
-	query.Order(gorm.Expr("? ?", filter.Sort, filter.OrderBy))
+	query.Order(fmt.Sprintf("%s %s", filter.Sort, filter.OrderBy))
 }
